@@ -133,3 +133,30 @@ a {
   flex-wrap: wrap;
   gap: 4px;
 }
+
+.work-experience-list__item {
+  margin-bottom: 30px;
+}
+
+.work-experience-list__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.work-experience-list__company {
+  font-style: italic;
+}
+
+.work-experience-list__location {
+  color: rgb(107, 114, 128);
+}
+
+.work-experience-list__product-list {
+  margin-bottom: 10px;
+}
+
+.work-experience-list__main-item::before {
+  content: '✔';
+  color: darkslateblue;
+}
