@@ -34,6 +34,8 @@ a {
 }
 
 .body {
+  font-size: 14px;
+  line-height: 21px;
   color: rgb(51, 51, 51);
 }
 
@@ -48,6 +50,7 @@ a {
   top: 0;
   left: 0;
   padding: 20px;
+  background: rgb(255, 255, 255);
   box-shadow: 0 4px 12px 0 hsla(from hsl(210,7%,11%) h s l/.1);
 }
 
@@ -55,6 +58,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header-list__link {
+  color: rgb(59, 130, 246);
 }
 
 .main {
