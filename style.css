@@ -127,3 +127,9 @@ a {
 .self-introduction-paragraph {
   margin-bottom: 10px;
 }
+
+.skills-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
