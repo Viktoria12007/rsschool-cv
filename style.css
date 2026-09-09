@@ -110,3 +110,15 @@ a {
 .contact-list__link {
   color: rgb(59, 130, 246);
 }
+
+.self-introduction-list {
+  margin-bottom: 10px;
+}
+
+.self-introduction-list__item::before {
+  content: "✅";
+}
+
+.self-introduction-paragraph {
+  margin-bottom: 10px;
+}
