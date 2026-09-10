@@ -190,3 +190,25 @@ code {
   color: rgb(107, 114, 128);
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  background-color: rgb(47, 47, 47);
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.footer-logo {
+  width: 48px;
+  height: 48px;
+}
