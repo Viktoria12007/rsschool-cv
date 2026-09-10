@@ -33,6 +33,18 @@ a {
   text-decoration: none;
 }
 
+pre {
+  padding: 20px;
+  overflow-x: auto;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+code {
+  font-family: monospace;
+  font-size: 14px;
+}
+
 .body {
   font-size: 14px;
   line-height: 21px;
