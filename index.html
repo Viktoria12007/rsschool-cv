@@ -155,6 +155,126 @@
           <li class="skills-list__item">Quasar</li>
         </ul>
       </section>
+      <section id="code-examples" class="code-examples section">
+        <h2 class="code-examples-title title">Code Examples</h2>
+        <div>Task description:
+          <a href="https://www.codewars.com/kata/526dad7f8c0eb5c4640000a4" target="_blank">
+            https://www.codewars.com/kata/526dad7f8c0eb5c4640000a4
+          </a>
+        </div>
+        <pre><code>
+          class Vector {
+            constructor(components) {
+              this.components = components;
+            }
+
+            add(vector) {
+              if (this.components.length !== vector.components.length) {
+                throw new Error('Vectors must have the same length');
+              }
+
+              return new Vector(
+                this.components.map((value, index) =&gt;
+                  value + vector.components[index]
+                )
+              );
+            }
+
+            subtract(vector) {
+              if (this.components.length !== vector.components.length) {
+                throw new Error('Vectors must have the same length');
+              }
+
+              return new Vector(
+                this.components.map((value, index) =&gt;
+                  value - vector.components[index]
+                )
+              );
+            }
+
+            dot(vector) {
+              if (this.components.length !== vector.components.length) {
+                throw new Error('Vectors must have the same length');
+              }
+
+              return this.components.reduce(
+                (sum, value, index) =&gt;
+                  sum + value * vector.components[index],
+                0
+              );
+            }
+
+            norm() {
+              return Math.sqrt(
+                this.components.reduce(
+                  (sum, value) =&gt; sum + value ** 2,
+                  0
+                )
+              );
+            }
+
+            equals(vector) {
+              return (
+                this.components.length === vector.components.length &amp;&amp;
+                this.components.every(
+                  (value, index) =&gt; value === vector.components[index]
+                )
+              );
+            }
+
+            toString() {
+              return `(${this.components.join(',')})`;
+            }
+          }
+        </code></pre>
+        <div>Task description:
+          <a href="https://www.codewars.com/kata/588534713472944a9e000029" target="_blank">
+            https://www.codewars.com/kata/588534713472944a9e000029
+          </a>
+        </div>
+        <pre><code>
+          function isBST(root) {
+            if (!root) {
+              return true;
+            }
+
+            let ascending;
+
+            if (root.left) {
+              ascending = root.left.value &lt; root.value;
+            } else if (root.right) {
+              ascending = root.right.value &gt; root.value;
+            } else {
+              return true;
+            }
+
+            function check(node, min, max) {
+              if (!node) {
+                return true;
+              }
+
+              if (ascending) {
+                if (node.value &lt;= min || node.value &gt;= max) {
+                  return false;
+                }
+              } else {
+                if (node.value &gt;= min || node.value &lt;= max) {
+                  return false;
+                }
+              }
+
+              return (
+                check(node.left, min, node.value) &amp;&amp;
+                check(node.right, node.value, max)
+              );
+            }
+
+            return ascending
+              ? check(root, -Infinity, Infinity)
+              : check(root, -Infinity, Infinity);
+          }
+        </code></pre>
+      </section>
       <section id="work-experience" class="work-experience section">
         <h2 class="work-experience-title title">Work Experience</h2>
         <ul class="work-experience-list">
