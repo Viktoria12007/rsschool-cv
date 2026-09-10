@@ -160,3 +160,21 @@ a {
   content: '✔';
   color: darkslateblue;
 }
+
+.education__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education__row:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.education__subtitle {
+  font-weight: bold;
+}
+
+.education__separate {
+  color: rgb(107, 114, 128);
+}
+
