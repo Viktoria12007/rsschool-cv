@@ -119,7 +119,7 @@ code {
   z-index: 1000;
   top: 0;
   left: 0;
-  padding: 20px;
+  padding: 0 20px 0 20px;
   background: var(--color-withe);
   box-shadow: 0 4px 12px 0 hsla(from hsl(210,7%,11%) h s l/.1);
 }
@@ -128,10 +128,29 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  line-height: 63px;
 }
 
 .header-list__link {
+  display: inline-block;
   color: var(--color-primary);
+}
+
+.header-list__link::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease-in-out border-color;
+}
+
+.header-list__link:hover::after,
+.header-list__link:active::after,
+.header-list__link:focus-visible::after {
+  border-color: var(--color-primary);
+}
+
+.header-list__link:focus-visible {
+  outline: none;
 }
 
 .header-list__link:visited {
